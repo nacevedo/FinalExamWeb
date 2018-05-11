@@ -99,7 +99,7 @@ export class App extends Component {
   renderCheck(){
     if (!this.state.routes || this.state.routes.lenght === 0 ) return; 
 
-    console.log(this.state.routes); 
+    
 
     return this.state.routes.map((p,i) =>
         <div key = {i}>
@@ -166,7 +166,7 @@ export class App extends Component {
     
       <section id="two" className="wrapper style1 special">
         <div className="inner">
-        <h3 > Please choose a route </h3>
+        <h2 > Please choose a route </h2>
         <div id="espacio">
         <select id = "selectRoute" onChange = {this.filter.bind(this)}>
             {this.renderRoutes()}
