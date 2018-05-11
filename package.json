@@ -9,6 +9,7 @@
     "bcrypt": "^1.0.3",
     "cities.json": "^1.1.2",
     "d3": "^4.13.0",
+    "d3-scale-chromatic": "^1.2.0",
     "heap": "^0.2.6",
     "meteor-node-stubs": "^0.3.2",
     "prop-types": "^15.6.1",

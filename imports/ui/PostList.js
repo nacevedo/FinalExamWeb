@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import { withTracker } from "meteor/react-meteor-data";
 import Post from "./Post";
+import { Posts } from "../api/posts";
 
-export default class PostList extends Component {
+export class PostList extends Component {
   constructor(props) {
     super(props);
 
     this.handleShowMore = this.handleShowMore.bind(this);
 
     this.state={
-        showItems: 10
+        showItems: 4
     };
   }
 
@@ -24,14 +25,10 @@ export default class PostList extends Component {
 
   renderPosts() {
     return this.props.posts.slice(0, this.state.showItems).map((p,i) =>
-      <div className="col-sm-4" key = {i}>
+      <div className="col-sm-6" key = {i}>
        <div className="box3">
           <Post
-              
-              onVote={this.props.onVote}
               post={p}
-              updatePostID={this.props.updatePostID.bind(this)}
-              updatePostName={this.props.updatePostName.bind(this)}
                >
           </Post>
       </div>
@@ -41,7 +38,7 @@ export default class PostList extends Component {
   render() {
     return (
       <div className="PostList">
-        
+        <h2> Route comments ..  {this.props.route} </h2> 
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
@@ -55,7 +52,11 @@ export default class PostList extends Component {
   }
 }
 
-PostList.propTypes = {
-  posts: PropTypes.array.isRequired,
-  onVote: PropTypes.func.isRequired
-};
+export default withTracker(
+  (x) => {
+    Meteor.subscribe("posts");
+    return {
+      posts: Posts.find({route : x.route}, {sort: {voteCount:-1}}).fetch(),
+    };
+  }
+)(PostList);

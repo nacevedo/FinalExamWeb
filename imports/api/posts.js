@@ -11,6 +11,8 @@ if(Meteor.isServer) {
     return Posts.find({});
   });
 
+
+
   const loginRule = {
   userId(userId) {
     const user = Meteor.users.findOne(userId);
@@ -38,22 +40,17 @@ DDPRateLimiter.addRule(postInsert, 5, 5000);
 
 Meteor.methods({
 
-  'posts.insert'(id, text) {
+  'posts.insert'(route, text) {
    
-   // check(text, String);
-    // check(city, String);
-    // check(text, String);
- 
-    // Make sure the user is logged in before inserting a task
-   // if (! Meteor.user()) {
-    //  throw new Meteor.Error('not-authorized');
-    //}
 
     Posts.insert({
-     name: id, 
-     cal : text
+     route : route,
+     text: text, 
+     who: Meteor.user()
    }); 
+
   },
+
   'posts.vote'(postId, emoji) {
 
     check(postId, String);

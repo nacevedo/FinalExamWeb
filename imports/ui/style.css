@@ -558,7 +558,7 @@ ul.style3 .first {
 /* Button Style                                                                  */
 /*********************************************************************************/
 
-	.button
+	button
 	{
 		display: inline-block;
 		margin-top: 2em;
@@ -574,44 +574,5 @@ ul.style3 .first {
 		color: #FFF;
 	}
 	
-/*********************************************************************************/
-/* Social Icon Styles                                                            */
-/*********************************************************************************/
 
-	ul.contact
-	{
-		margin: 0;
-		padding: 2em 0em 0em 0em;
-		list-style: none;
-	}
-	
-	ul.contact li
-	{
-		display: inline-block;
-		padding: 0em 0.10em;
-		font-size: 1em;
-	}
-	
-	ul.contact li span
-	{
-		display: none;
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.contact li a
-	{
-	}
-	
-	ul.contact li a:before
-	{
-		display: inline-block;
-		background: none;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		text-align: center;
-		color: rgba(255,255,255,1);
-	}
-	
 

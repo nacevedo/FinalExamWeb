@@ -10,7 +10,7 @@ export default class PostAdd extends Component {
     };
   }
   clearContents(element) {
-    this.refs.title.value = '';
+    
     this.refs.text.value = ''; 
   }
 
@@ -22,19 +22,19 @@ export default class PostAdd extends Component {
       
       
 
-      <h4>Escriba el nombre del técnico al que quiere calificar y su califición </h4>
+      <h4>Enter the route you wish to comment and the correspondiing comment </h4>
       <div>
-        <textarea id="title" type="text" role="textbox"  placeholder="Nombre del técnico que quiere calificar" aria-label="Favor&#39;s Title" ref="title"/>
+        <p> Insert comment for route {this.props.route} </p> 
         </div>
         <div>
-        <textarea className="com-text" role="textbox" type="text" placeholder="Califición (de 1 a 10) " aria-label="Type a description of the favor you need help with" ref="text"/>
+        <textarea className="com-text" role="textbox" type="text" placeholder="text" aria-label="Please wirte a comment here" ref="text"/>
         </div>
         <button className="button"
 
           onClick={
             () => 
             {
-              this.props.onAdd(this.refs.title.value, this.refs.text.value);
+              this.props.onAdd( this.refs.text.value);
               this.clearContents(this);
             }
           }
