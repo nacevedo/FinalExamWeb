@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withTracker } from "meteor/react-meteor-data";
 import Post from "./Post";
 import { Posts } from "../api/posts";
+import { Meteor } from 'meteor/meteor';
 
 class PostList extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class PostList extends Component {
     return (
       <div className="PostList">
         <h3> Comments.. {this.props.route} </h3>
-        {this.renderPosts()}
+        {this.renderPosts() }
         <div className="row">
         <div className="col-sm-12">
         <button className="my-btn-6" onClick={this.handleShowMore}>
@@ -54,9 +55,13 @@ class PostList extends Component {
 
 export default withTracker(
   (x) => {
+    console.log("Tracker", x );
     Meteor.subscribe("posts");
+    const posts = Posts.find({route : x.route}, {sort: {voteCount:-1}}).fetch();
+    console.log(posts);
     return {
-      posts: Posts.find({route : x.route}, {sort: {voteCount:-1}}).fetch(),
+      route: x.route,
+      posts: posts
     };
   }
 )(PostList);

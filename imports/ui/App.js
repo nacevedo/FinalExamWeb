@@ -143,14 +143,18 @@ export class App extends Component {
 
   render() {
     return(
-      <div> 
-        
-    
+      <div className = "App"> 
       <section id="one" className="wrapper">
+      
         <div className="inner">
           <div className="flex flex-3">
           <h1> San Francisco Next-Bus Routes!</h1>
-          <AccountsUIWrapper/>
+          <div id = "sign-in-place">
+          <AccountsUIWrapper />
+          </div>
+          </div>
+          </div>
+         </section>
           
           <Buses f = {this.state.fGraph}/>
           
@@ -158,10 +162,9 @@ export class App extends Component {
             <div className="row">
           {this.renderCheck()}
           </div>
-        </div>
-        </div>
+        
          
-      </section>
+     
 
     
       <section id="two" className="wrapper style1 special">
@@ -188,10 +191,6 @@ export class App extends Component {
   
  }
 }
-
-App.propTypes = {
-  posts: PropTypes.array.isRequired
-};
 
 
 export default withTracker(

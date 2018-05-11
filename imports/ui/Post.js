@@ -5,7 +5,7 @@ import { withTracker } from "meteor/react-meteor-data";
 
 
 
-class Post extends Component {
+export default class Post extends Component {
   constructor(props) {
     super(props);
 
@@ -90,8 +90,4 @@ class Post extends Component {
 
 
 
-export default withTracker(
-  (x) => {
-    
-  }
-  )(Post);
+

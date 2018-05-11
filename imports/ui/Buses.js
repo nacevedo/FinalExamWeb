@@ -89,6 +89,8 @@ find(){
 
 componentDidMount(){
 
+
+
 	this.find(); 
 
 	const svg = d3.select(this.svg);
@@ -131,6 +133,9 @@ componentDidMount(){
 }
 
 componentWillUpdate(newProps, nextState){
+	
+	this.g.selectAll("rect").remove();
+	this.g.select(".legend").remove();  
 
 	this.update(nextState.data);
 	console.log("willUpdate"); 
