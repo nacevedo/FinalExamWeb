@@ -133,7 +133,7 @@ componentDidMount(){
 }
 
 componentWillUpdate(newProps, nextState){
-	
+
 	this.g.selectAll("rect").remove();
 	this.g.select(".legend").remove();  
 
@@ -143,10 +143,9 @@ componentWillUpdate(newProps, nextState){
 
 update (data){
 
-	
+	console.log("Data", data);
 
 	if (!data.vehicle || data.vehicle.length === 0) return ; 
-
 
 	//Eliminate data in filter
 
@@ -269,7 +268,7 @@ render() {
 	return (
 		<div id="grafica"> 
 		<svg width="1000" 
-		height="450" 
+		height="600" 
 		ref = {(svg) => this.svg = svg}>
 		</svg>
 

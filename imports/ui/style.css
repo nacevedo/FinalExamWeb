@@ -21,11 +21,17 @@
 	padding-left: 50px;
 }
 
+#checks {
+	padding : 0px 50px;
+	padding-bottom: 25px; 
+}
 
 
 html, body {
 	height: 100%;
 }
+
+
 
 
 	

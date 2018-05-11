@@ -157,11 +157,13 @@ export class App extends Component {
          </section>
           
           <Buses f = {this.state.fGraph}/>
-          
+          <section id = "checks">
             <h3>Check the boxes with the routes you don&#39;t want to compare in the graph </h3>
+            <p> (it may take until 10 seconds to a route to appear again</p>
             <div className="row">
           {this.renderCheck()}
           </div>
+          </section>
         
          
      
