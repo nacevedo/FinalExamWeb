@@ -22,7 +22,7 @@ export default class PostAdd extends Component {
       
       
 
-      <h4>Enter the route you wish to comment and the correspondiing comment </h4>
+      <h3 >Enter your comment </h3>
       <div>
         <p> Insert comment for route {this.props.route} </p> 
         </div>

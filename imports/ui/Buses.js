@@ -43,8 +43,7 @@ find(){
 	fetch("http://webservices.nextbus.com/service/publicJSONFeed?command=vehicleLocations&a=sf-muni&t=0")
 	.then((res)=>res.json())
 	.then((data)=> {
-		console.log("fetch"); 
-		console.log("Data", data); 
+		
 
 		if(data.error){
 			window.alert("Error");
@@ -64,8 +63,7 @@ find(){
 		fetch("http://webservices.nextbus.com/service/publicJSONFeed?command=vehicleLocations&a=sf-muni&t=0")
 		.then((res)=>res.json())
 		.then((data)=> {
-			console.log("fetch"); 
-			console.log("Data", data); 
+			
 
 			this.g.selectAll("rect").remove();
 			this.g.select(".legend").remove();  
@@ -108,7 +106,7 @@ componentDidMount(){
 	this.y = d3.scaleLinear()
 	.rangeRound([this.height - this.margin.top - this.margin.bottom, 0]);
 
-	this.z = d3.scaleSequential(d3Chromatic.interpolateGreens);
+	this.z = d3.scaleSequential(d3Chromatic.interpolateBlues);
 
 	this.g.append("g")
 	.attr("class", "axis--x")
@@ -140,8 +138,7 @@ componentWillUpdate(newProps, nextState){
 
 update (data){
 
-	console.log("Update", data.vehicle); 
-	console.log("Update data solo", data); 
+	
 
 	if (!data.vehicle || data.vehicle.length === 0) return ; 
 
@@ -151,22 +148,22 @@ update (data){
 	for (var i = 0; i < data.vehicle.length ; i++){
 		for (var j = 0; j < this.props.f.length; j++)
 		{
-			console.log(this.props.f[j]); 
+			 
 			if (data.vehicle[i] == undefined){
 			}
 			else if(data.vehicle[i].routeTag == this.props.f[j])
 			{
 				data.vehicle.splice(i, 1);
-				console.log("machetazo");
+				
 			}
 		}
 	}
 
 
-	console.log(data.vehicle); 
+	 
 	const nestedBuses = d3.nest().key((d) => d.routeTag).entries(data.vehicle); 
 
-	console.log(nestedBuses); 
+	
 	var maxNumBuses = 0; 
 
 	for (let route of nestedBuses ) {
@@ -186,7 +183,7 @@ update (data){
 	const buses = nestedBuses.sort(function(a, b) { return b.total - a.total; });
 
 
-	console.log(maxNumBuses); 
+	
 	keys = d3.range(maxNumBuses); 
 
 	const stackedBuses = d3.stack()
@@ -195,8 +192,7 @@ update (data){
 		return key < d.values.length ? d.values[key].distance : 0;
 	})(nestedBuses)
 
-	console.log("stackedBuses", stackedBuses); 
-	console.log("nestedBuses", stackedBuses); 
+
 
 
 	this.x.domain(nestedBuses.map(function(d) { return d.key; }));
@@ -266,9 +262,9 @@ update (data){
 
 render() {
 	return (
-		<div> 
-		<svg width="960" 
-		height="600" 
+		<div id="grafica"> 
+		<svg width="1000" 
+		height="450" 
 		ref = {(svg) => this.svg = svg}>
 		</svg>
 

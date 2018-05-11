@@ -103,7 +103,12 @@ export class App extends Component {
 
     return this.state.routes.map((p,i) =>
         <div key = {i}>
+        <div className="col-sm-2">
+        <div className="row">
+        <div className="col-sm-6">
           <p> {p.tag} </p>
+          </div>
+          <div className="col-sm-6">
           <input type = "checkbox" onChange = { () =>{
                                               console.log(p.tag); 
                                               var f = this.state.fGraph; 
@@ -120,6 +125,10 @@ export class App extends Component {
                                                 fGraph : f
                                               }); 
                                                        } } />
+          
+          </div>
+          </div>
+          </div>
         </div>
     
     );
@@ -140,34 +149,38 @@ export class App extends Component {
       <section id="one" className="wrapper">
         <div className="inner">
           <div className="flex flex-3">
-          <h2> San Francisco Next-Bus Routes!</h2>
+          <h1> San Francisco Next-Bus Routes!</h1>
           <AccountsUIWrapper/>
+          
           <Buses f = {this.state.fGraph}/>
-            
+          
+            <h3>Check the boxes with the routes you don&#39;t want to compare in the graph </h3>
+            <div className="row">
+          {this.renderCheck()}
           </div>
         </div>
+        </div>
+         
       </section>
 
     
       <section id="two" className="wrapper style1 special">
         <div className="inner">
-        <h3> Please choose a route </h3>
+        <h3 > Please choose a route </h3>
+        <div id="espacio">
         <select id = "selectRoute" onChange = {this.filter.bind(this)}>
             {this.renderRoutes()}
-          </select>
+        </select>
+        </div>
           <div className = "row">
-          <div className ="col-sm-8"> <PostList route = {this.state.filter} /> </div>
-          <div className = "col-sm-4"> <PostAdd route = {this.state.filter} onAdd = {this.onAdd.bind(this)}/> </div>
+          <div className ="col-sm-6"> <PostList route = {this.state.filter} /> </div>
+          <div className = "col-sm-6"> <PostAdd route = {this.state.filter} onAdd = {this.onAdd.bind(this)}/> </div>
           </div>
 
           </div>
       </section>
 
-        <div id="page" className="container">
-          {this.renderCheck()}
-          
-          
-        </div>
+        
 
       </div> 
       ); 

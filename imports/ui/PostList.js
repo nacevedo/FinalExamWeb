@@ -38,7 +38,7 @@ class PostList extends Component {
   render() {
     return (
       <div className="PostList">
-        
+        <h3> Comments.. {this.props.route} </h3>
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
