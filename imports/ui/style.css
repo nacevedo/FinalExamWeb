@@ -5,6 +5,7 @@
 #grafica{
 	padding-bottom: 50px;
 	padding-top: 20px;
+	text-align: center;
 }
 
 #espacio{
@@ -404,6 +405,8 @@ div#login-buttons-open-change-password.login-button:hover{
 #login-buttons .login-close-text {
 	float: right;
 }
+
+
 
 
 
