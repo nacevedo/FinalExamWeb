@@ -51,32 +51,6 @@ Meteor.methods({
 
   },
 
-  'posts.vote'(postId, emoji) {
-
-    check(postId, String);
-    check(emoji, String);
-
-
-    let postObj = Posts.findOne(postId);
-
-    console.log("llega hasta aca" + postObj); 
-
-    if (!postObj) {
-      throw new Meteor.Error('Post not found!');
-      //console.err("Post not found!");
-      //return;
-    }
-
-    postObj.voteCount+=1;
-    if (postObj.votes[emoji]===undefined) {
-      postObj.votes[emoji]=0;
-    }
-    postObj.votes[emoji]+=1;
-
-    Posts.update(postObj._id,
-      postObj);
-
-  },
 });
 
 

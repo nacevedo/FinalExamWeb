@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Meteor } from 'meteor/meteor';
 import PropTypes from "prop-types";
 import { withTracker } from "meteor/react-meteor-data";
-import {Route, NavLink, HashRouter} from "react-router-dom";
+
 
 
 class Post extends Component {

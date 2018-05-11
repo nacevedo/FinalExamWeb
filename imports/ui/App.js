@@ -29,50 +29,6 @@ export class App extends Component {
   }
 
 
-  onChangeCity(newCity){
-    
-    this.setState({
-      city: newCity
-    });
-  }
-
-  onChangePost(newName){
-    
-    this.setState({
-      postName: newName
-    });
-  }
-
-  onChangePostID(id){
-    
-    this.setState({
-      postID: id
-    });
-
-  }
-
-  onChangeChatID(id){
-    
-    this.setState({
-      chatID: id
-    });
-
-  }
-
-  onChangeUser1(id){
-    
-    this.setState({
-      user1: id
-    });
-
-  }
-
-  onChangeUser2(id){
-    this.setState({
-      user2: id
-    });
-
-  }
 
   filter(text){
     this.setState({
@@ -179,24 +135,39 @@ export class App extends Component {
   render() {
     return(
       <div> 
-        <div id="page" className="container">
+        
+    
+      <section id="one" className="wrapper">
+        <div className="inner">
+          <div className="flex flex-3">
           <h2> San Francisco Next-Bus Routes!</h2>
           <AccountsUIWrapper/>
           <Buses f = {this.state.fGraph}/>
-          {this.renderCheck()}
-          <h3> Please choose a route </h3>
-          <select id = "selectRoute" onChange = {this.filter.bind(this)}>
+            
+          </div>
+        </div>
+      </section>
+
+    
+      <section id="two" className="wrapper style1 special">
+        <div className="inner">
+        <h3> Please choose a route </h3>
+        <select id = "selectRoute" onChange = {this.filter.bind(this)}>
             {this.renderRoutes()}
           </select>
           <div className = "row">
           <div className ="col-sm-8"> <PostList route = {this.state.filter} /> </div>
           <div className = "col-sm-4"> <PostAdd route = {this.state.filter} onAdd = {this.onAdd.bind(this)}/> </div>
           </div>
+
+          </div>
+      </section>
+
+        <div id="page" className="container">
+          {this.renderCheck()}
+          
+          
         </div>
-
-       
-
-      
 
       </div> 
       ); 

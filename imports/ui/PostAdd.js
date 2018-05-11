@@ -38,7 +38,7 @@ export default class PostAdd extends Component {
               this.clearContents(this);
             }
           }
-        >Enviar Califición
+        >Send Comment
         </button>
       </div>
     );

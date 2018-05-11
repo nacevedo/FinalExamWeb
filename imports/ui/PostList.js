@@ -4,7 +4,7 @@ import { withTracker } from "meteor/react-meteor-data";
 import Post from "./Post";
 import { Posts } from "../api/posts";
 
-export class PostList extends Component {
+class PostList extends Component {
   constructor(props) {
     super(props);
 
@@ -38,7 +38,7 @@ export class PostList extends Component {
   render() {
     return (
       <div className="PostList">
-        <h2> Route comments ..  {this.props.route} </h2> 
+        
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
