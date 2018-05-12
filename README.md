@@ -5,6 +5,12 @@
 
 San Francisco Routes will help you find very usefull live information about Next-Bus routes!
 
+###**Tecnologies**
+* [NextBus API :](https://gist.github.com/grantland/7cf4097dd9cdf0dfed14) To get the real time data from the buses.
+* [Meteor.js:](https://www.meteor.com/) To work as a backend and create the server of the application.
+* [React.js:](https://www.reactjs.org) To make the user interface.
+* [D3.js:](https://d3js.org) To Make the visualization from the [NextBus](https://gist.github.com/grantland/7cf4097dd9cdf0dfed14) data.
+
 #### **About**
 This apps alows you to visualize the added distance of each San Francisco Next-Bus routes in order to help user undestand how the buses on each route are moving to make choices about their means of transport. Also, users that are interested in a single route can select it an get comments about that route of other users, they can also comment if they like to help the community with usefull feedback about experiences with certain route. 
 
