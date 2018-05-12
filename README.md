@@ -1,18 +1,18 @@
-<img src="https://raw.githubusercontent.com/nacevedo/MandaoDao/master/client/img/logo.png" title="Sakana" alt="Mandao Dao Logo" href="" height = 100px width = 100px>
+<img src="https://raw.githubusercontent.com/nacevedo/FinalExamWeb/master/public/sf.png" title="Sakana" alt="Mandao Dao Logo" href="" height = 100px width = 100px>
 
 
-# Mandao Dao
+# San Francisco Routes
 
-Mandao Dao is a web aplication to help people who are new to a city to connect with citizens to help them to solve problems or needs!
+San Francisco Routes will help you find very usefull live information about Next-Bus routes!
 
-#### **Are you new to a city?**
-Just enter to the app register yourself and create a new favor in your current city, people who are living there can help put comments that can help all the community with the same problems! Additionaly, if you want to contact them you just need to click on the comment to be in touch with them. 
+#### **About**
+This apps alows you to visualize the added distance of each San Francisco Next-Bus routes in order to help user undestand how the buses on each route are moving to make choices about their means of transport. Also, users that are interested in a single route can select it an get comments about that route of other users, they can also comment if they like to help the community with usefull feedback about experiences with certain route. 
 
-#### **Do you want to help people who are new to your city?**
-Enter to the webpage and search for your city, see the favors people have post. If there's one you can help with don't hesitate to sign in put a comment, people can use your advise to improve their experience in your city. You can also offer your services to someone with an specific need or problem, so you can make some extra pennies for your milkshake! 😜
+#### **Creative Addition**
+You can filter the routes to compare them easily! just check the boxes of the routes that you don´t want to see in the graph an it will update automatically. This makes comparision between a group of routes much easier. 
 
-## Visit us!
-Currently our app is hosted in heroku. Please check it out .. [click here!](https://mandaodao.herokuapp.com/#/)
+## Check it out here!
+Currently our app is hosted in heroku. Please check it out .. [click here!](http://sf-nextbus-buses.herokuapp.com/)
 
 ## Try it yourself
 
@@ -23,26 +23,20 @@ meteor npm install
 meteor
 ```
 
-## Running Tests
-In order tu run the tests of the project just run
-
-```
-meteor test --driver-package=cultofcoders:mocha --port 3100
-```
 
 ## Motivation
-This is a project for a [web development class](http://johnguerra.co/classes/webDevelopment_spring_2018/) in [Uniandes](https://www.uniandes.edu.co). The objective is to make a quick project using **Meteor with React**.
+This is an exam for a [web development class](http://johnguerra.co/classes/webDevelopment_spring_2018/) in [Uniandes](https://www.uniandes.edu.co). **Meteor with React**.
 
 ## Contributing
-If anyone wants to give me any help or ideas, you can by making new [Issues](https://github.com/nacevedo/MandaoDao/issues) or a [Pull requests](https://github.com/nacevedo/MandaoDao/pulls).
+If anyone wants to give me any help or ideas, you can by making new [Issues](https://github.com/nacevedo/FinalExamWeb/issues) or a [Pull requests](https://github.com/nacevedo/FinalExamWeb/pulls).
 
 ## Authors 
-**Bibiana Gamba** 👩🏽‍🎨
+
 **Nicolás Acevedo** 👨🏼‍🔬
-# Beta
-Beta versión! Please write use to include your city in sugestions 😉...
+
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository has the standard MIT license. You can find it [here.](https://github.com/nacevedo/MandaoDao/blob/master/LICENSE)
+This repository has the standard MIT license. You can find it [here.](https://github.com/nacevedo/FinalExamWeb/blob/master/LICENSE)
+
