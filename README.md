@@ -29,6 +29,8 @@ Install [Meteor](https://www.meteor.com/install) then clone the repo and run
 meteor npm install
 meteor
 ```
+## Bug fix
+There was a problem in the visualization because the distances of each route where not organized. By fixing this the visualization is much appealing and usefull. 
 
 
 ## Motivation
