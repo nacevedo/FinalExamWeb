@@ -5,7 +5,8 @@
 
 San Francisco Routes will help you find very usefull live information about Next-Bus routes!
 
-### **Tecnologies**
+#### **Tecnologies**
+
 * [NextBus API :](https://gist.github.com/grantland/7cf4097dd9cdf0dfed14) To get the real time data from the buses.
 * [Meteor.js:](https://www.meteor.com/) To work as a backend and create the server of the application.
 * [React.js:](https://www.reactjs.org) To make the user interface.
